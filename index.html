@@ -40,20 +40,19 @@
             let nomeIndicador = document.getElementById("nomeIndicador").value;
             let sobrenomeIndicador = document.getElementById("sobrenomeIndicador").value;
             let telefoneIndicador = document.getElementById("telefoneIndicador").value;
-            let telefoneLoja = document.getElementById("telefoneLoja").value;
             let nomeIndicado = document.getElementById("nomeIndicado").value;
             let telefoneIndicado = document.getElementById("telefoneIndicado").value;
             
-            if (!nomeIndicador || !sobrenomeIndicador || !telefoneIndicador || !telefoneLoja || !nomeIndicado || !telefoneIndicado) {
+            if (!nomeIndicador || !sobrenomeIndicador || !telefoneIndicador || !nomeIndicado || !telefoneIndicado) {
                 alert("Por favor, preencha todos os campos!");
                 return;
             }
             
             let mensagem = `Oi ${nomeIndicado}, seu amigo ${nomeIndicador} ${sobrenomeIndicador} te indicou para nossa loja! 🎉\n\n` +
                            `Aproveite agora um desconto especial de 10% na sua primeira compra! 🛍️\n\n` +
-                           `Fale conosco no WhatsApp para garantir seu desconto: https://wa.me/5511949572186${telefoneLoja} 👇\n\n`;
+                           `Fale conosco no WhatsApp para garantir seu desconto!`;
             
-            let linkWhatsApp = `https://wa.me/55${telefoneIndicado}?text=${encodeURIComponent(mensagem)}`;
+            let linkWhatsApp = `https://wa.me/5511949572186${telefoneIndicado}?text=${encodeURIComponent(mensagem)}`;
             window.open(linkWhatsApp, "_blank");
         }
     </script>
@@ -66,7 +65,6 @@
         <input type="text" id="nomeIndicador" placeholder="Seu Nome">
         <input type="text" id="sobrenomeIndicador" placeholder="Seu Sobrenome">
         <input type="tel" id="telefoneIndicador" placeholder="Seu WhatsApp (com DDD)">
-        <input type="tel" id="telefoneLoja" placeholder="WhatsApp da Loja (com DDD)">
         <input type="text" id="nomeIndicado" placeholder="Nome do Amigo">
         <input type="tel" id="telefoneIndicado" placeholder="WhatsApp do Amigo (com DDD)">
         
